@@ -15,7 +15,7 @@ set autoindent	" Auto-indent new lines
 set shiftwidth=2	" Number of auto-indent spaces
 set smartindent	" Enable smart-indent
 set smarttab	" Enable smart-tabs
- 
+
 "# Advanced
 set ruler	" Show row and column ruler information
  
@@ -29,6 +29,9 @@ Plug 'dracula/vim', { 'as': 'dracula' }
 Plug 'mattn/emmet-vim'
 Plug 'scrooloose/nerdtree'
 Plug 'cakebaker/scss-syntax.vim'
+Plug 'tpope/vim-surround' " currounding with cs
+Plug 'ctrlpvim/ctrlp.vim' "Ctrl + p fizzy finder
+Plug 'tpope/vim-commentary' "vim gcc comments
 " Initialize plugin system
 call plug#end()
 "PlugInstall to install plugins
@@ -36,4 +39,7 @@ call plug#end()
 map <C-n> :NERDTreeToggle<CR>
 "colorschemes
 colorscheme dracula
+
+
+set noswapfile
 
