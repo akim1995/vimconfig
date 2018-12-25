@@ -15,6 +15,10 @@ set autoindent	" Auto-indent new lines
 set shiftwidth=2	" Number of auto-indent spaces
 set smartindent	" Enable smart-indent
 set smarttab	" Enable smart-tabs
+set conceallevel=1
+map <leader>l :exec &conceallevel ? "set conceallevel=0" : "set conceallevel=1"<CR>
+
+let g:javascript_conceal_return               = "⬅"
 
 "# Advanced
 set ruler	" Show row and column ruler information
@@ -32,6 +36,11 @@ Plug 'cakebaker/scss-syntax.vim'
 Plug 'tpope/vim-surround' " currounding with cs
 Plug 'ctrlpvim/ctrlp.vim' "Ctrl + p fizzy finder
 Plug 'tpope/vim-commentary' "vim gcc comments
+Plug 'itchyny/lightline.vim' " vim status line
+Plug 'tpope/vim-fugitive'
+Plug 'mhinz/vim-signify'
+Plug 'pangloss/vim-javascript'
+
 " Initialize plugin system
 call plug#end()
 "PlugInstall to install plugins
@@ -40,6 +49,6 @@ map <C-n> :NERDTreeToggle<CR>
 "colorschemes
 colorscheme dracula
 
-
 set noswapfile
+set noshowmode "remove standart status line
 
