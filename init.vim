@@ -16,6 +16,7 @@ set shiftwidth=2	" Number of auto-indent spaces
 set smartindent	" Enable smart-indent
 set smarttab	" Enable smart-tabs
 set conceallevel=1
+let mapleader="," "Leader key is ,
 map <leader>l :exec &conceallevel ? "set conceallevel=0" : "set conceallevel=1"<CR>
 
 let g:javascript_conceal_return               = "⬅"
