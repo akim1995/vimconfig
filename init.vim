@@ -21,10 +21,11 @@ set incsearch	" Searches for strings incrementally
 set autoindent	" Auto-indent new lines
 set smartindent	" Enable smart-indent
 set smarttab	" Enable smart-tabs
-set conceallevel=1
+filetype indent plugin on
+"set conceallevel=1
 let mapleader="," "Leader key is ,
-map <leader>l :exec &conceallevel ? "set conceallevel=0" : "set conceallevel=1"<CR>
-let g:javascript_conceal_return               = "⬅"
+"map <leader>l :exec &conceallevel ? "set conceallevel=0" : "set conceallevel=1"<CR>
+"let g:javascript_conceal_return               = "⬅"
 
 "# Advanced
 set ruler	" Show row and column ruler information
@@ -45,7 +46,9 @@ Plug 'tpope/vim-commentary' "vim gcc comments
 Plug 'itchyny/lightline.vim' " vim status line
 Plug 'tpope/vim-fugitive'
 Plug 'mhinz/vim-signify'
-Plug 'pangloss/vim-javascript'
+"Plug 'pangloss/vim-javascript'
+Plug 'Raimondi/delimitMate', { 'for': ['javascript', 'php'] }
+Plug 'sheerun/vim-polyglot'
 
 " Initialize plugin system
 call plug#end()
@@ -59,3 +62,4 @@ set noswapfile
 set noshowmode "remove standart status line
 autocmd FileType * setlocal formatoptions-=o "remove continuation of comment lines on o
 
+hi Normal guibg=NONE ctermbg=NONE
