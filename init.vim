@@ -51,6 +51,7 @@ Plug 'mhinz/vim-signify'
 Plug 'Raimondi/delimitMate', { 'for': ['javascript', 'php'] }
 Plug 'sheerun/vim-polyglot'
 Plug 'captbaritone/better-indent-support-for-php-with-html'
+Plug 'itchyny/vim-gitbranch'
 " Initialize plugin system
 call plug#end()
 "PlugInstall to install plugins
@@ -62,7 +63,14 @@ map <C-n> :NERDTreeToggle<CR>
 "=== ARCHERY COLORSCEME =======
 colorscheme archery
 let g:lightline = {
-    \ 'colorscheme': 'archery',
+		\ 'colorscheme': 'archery',
+		\'active': {
+		\   'left': [ [ 'mode', 'paste' ],
+		\             [ 'gitbranch', 'readonly', 'filename', 'modified' ] ]
+		\ },
+		\ 'component_function': {
+		\   'gitbranch': 'fugitive#head'
+		\ },
     \ }
 "===============================
 
