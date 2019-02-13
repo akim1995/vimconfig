@@ -58,7 +58,14 @@ call plug#end()
 map <C-n> :NERDTreeToggle<CR>
 "colorschemes
 "colorscheme dracula
+
+"=== ARCHERY COLORSCEME =======
 colorscheme archery
+let g:lightline = {
+    \ 'colorscheme': 'archery',
+    \ }
+"===============================
+
 set termguicolors
 
 set noswapfile
