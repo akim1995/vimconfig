@@ -37,6 +37,7 @@ set backspace=indent,eol,start	" Backspace behaviour
 call plug#begin('~/.local/share/nvim/plugged')
 
 Plug 'dracula/vim', { 'as': 'dracula' }
+Plug 'Badacadabra/vim-archery'
 Plug 'mattn/emmet-vim'
 Plug 'scrooloose/nerdtree'
 Plug 'cakebaker/scss-syntax.vim'
@@ -49,14 +50,16 @@ Plug 'mhinz/vim-signify'
 "Plug 'pangloss/vim-javascript'
 Plug 'Raimondi/delimitMate', { 'for': ['javascript', 'php'] }
 Plug 'sheerun/vim-polyglot'
-
+Plug 'captbaritone/better-indent-support-for-php-with-html'
 " Initialize plugin system
 call plug#end()
 "PlugInstall to install plugins
 
 map <C-n> :NERDTreeToggle<CR>
 "colorschemes
-colorscheme dracula
+"colorscheme dracula
+colorscheme archery
+set termguicolors
 
 set noswapfile
 set noshowmode "remove standart status line
