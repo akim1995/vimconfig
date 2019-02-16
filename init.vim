@@ -80,4 +80,20 @@ set noswapfile
 set noshowmode "remove standart status line
 autocmd FileType * setlocal formatoptions-=o "remove continuation of comment lines on o
 
+nnoremap <A-j> :m .+1<CR>==
+nnoremap <A-k> :m .-2<CR>==
+inoremap <A-j> <Esc>:m .+1<CR>==gi
+inoremap <A-k> <Esc>:m .-2<CR>==gi
+vnoremap <A-j> :m '>+1<CR>gv=gv
+vnoremap <A-k> :m '<-2<CR>gv=gv
+
+"In normal mode or in insert mode, press Alt-j to move the current line down, or press Alt-k to move
+"the current line up.
+"
+"After visually selecting a block of lines (for example, by pressing V then moving the cursor down),
+"press Alt-j to move the whole block down, or press Alt-k to move the block up.
+
+" cd for folder of currently openned file (only for this window or tab)
+nnoremap <F6> :lcd %:p:h<CR>
+
 hi Normal guibg=NONE ctermbg=NONE
