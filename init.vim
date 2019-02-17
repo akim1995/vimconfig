@@ -94,6 +94,15 @@ vnoremap <A-k> :m '<-2<CR>gv=gv
 "press Alt-j to move the whole block down, or press Alt-k to move the block up.
 
 " cd for folder of currently openned file (only for this window or tab)
-nnoremap <F6> :lcd %:p:h<CR>
+" in cmd mode % means filename %:p = absolute file path and :h removes filename from path
+
+nnoremap <leader>cd :lcd %:p:h<CR>
+
+nnoremap <Up> <Nop>
+nnoremap <Down> <Nop>
+nnoremap <Left> <Nop>
+nnoremap <Right> <Nop>
+
+iabbrev @@ akim.khalitov.ya@gmail.com
 
 hi Normal guibg=NONE ctermbg=NONE
