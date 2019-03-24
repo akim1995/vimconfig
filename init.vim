@@ -61,17 +61,18 @@ map <C-n> :NERDTreeToggle<CR>
 "colorscheme dracula
 
 "=== ARCHERY COLORSCEME =======
-colorscheme archery
-let g:lightline = {
-		\ 'colorscheme': 'archery',
-		\'active': {
-		\   'left': [ [ 'mode', 'paste' ],
-		\             [ 'gitbranch', 'readonly', 'filename', 'modified' ] ]
-		\ },
-		\ 'component_function': {
-		\   'gitbranch': 'fugitive#head'
-		\ },
-    \ }
+"colorscheme archery
+colorscheme dracula
+" let g:lightline = {
+" 		\ 'colorscheme': 'archery',
+" 		\'active': {
+" 		\   'left': [ [ 'mode', 'paste' ],
+" 		\             [ 'gitbranch', 'readonly', 'filename', 'modified' ] ]
+" 		\ },
+" 		\ 'component_function': {
+" 		\   'gitbranch': 'fugitive#head'
+" 		\ },
+"     \ }
 "===============================
 
 set termguicolors
